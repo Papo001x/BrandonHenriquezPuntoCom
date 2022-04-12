@@ -1,0 +1,20 @@
+<nav class="menu">
+  <label class="logo">Brandon Henriquez</label>
+  <div class="menu_interno" [class.menuInternoClass]="menuVariable">
+    <ul class="menu_items">
+      <li class="active"><a href="#">Inicio</a></li>
+      <li><a href="#">Acerca de mi</a></li>
+      <li><a href="#">Experiencia</a></li>
+      <li><a href="#">Educación</a></li>
+      <li><a href="#">Portafolio</a></li>
+      <li><a href="#">Cursos y certificaciones</a></li>
+      <li><a href="#">Conocimientos y aptitudes</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
+  <span class="btn_menu" (click)="abrirMenu()">
+    <div *ngIf="menuVariable; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock><i class="fa-solid fa-bars"></i></ng-template>
+    <ng-template #elseBlock><i class="fa-solid fa-x"></i></ng-template>
+  </span>
+</nav>
